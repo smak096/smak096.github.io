@@ -1,0 +1,146 @@
+/* Fonts */
+
+@font-face {
+	font-family: 'Ink Free Regular';
+	src: url('/fonts/Inkfree.ttf') format('truetype');
+}
+/*
+@font-face {
+    font-family: 'Comme Light';
+    src: url('/fonts/Comme-Light.woff') format('woff'),
+         url('/fonts/Comme-Light.ttf') format('truetype');
+
+}
+*/
+@font-face {
+    font-family: 'Swis721 Lt BT';
+    src: url('/fonts/swissl.ttf') format('truetype');
+
+}
+
+
+/* Basic */
+p { 
+	color: black;
+	text-align: left;
+	font-family: "Swis721 Lt BT", Verdana, sans-serif;
+	font-size: 16px
+}
+
+h2 {
+		display: block;
+		font-family: "Swis721 Lt BT", Tahoma, sans-serif;
+		font-size: 60px;
+		text-indent: 15%;
+		line-height: 100px;
+		
+}
+
+#para1 {
+	text-align: center;
+	color: #ff7373;
+}
+
+/* Nav bar stuff */
+#ul1 {
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #47474C;
+	font-family: "Swis721 Lt BT", Verdana, sans-serif;
+	font-size: 12pt;
+	border-top: 5px solid #1cedd2; /* Rose pink #ff7373 */
+/* fixed navigation bar; stays at the top even when scrolling */ 
+	position: sticky;
+	top: 0;
+	
+}
+
+
+#ul1 li {
+	float: left;
+
+}
+#ul1 li a{ 
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+
+/* Changing the link color on hover */
+#ul1 li a:hover {
+		background-color: #111;
+}
+
+.active {
+	background-color: #1cedd2;
+	/* royal blue #504caf; waterspout #1cedd2 */
+	
+}
+
+
+/* header stuff*/ 
+header {
+	font-family: "Open Sans", sans-serif
+}
+
+div.header {
+	font-size: 25px;
+	font-family: "Swis721 Lt BT", sans-serif;
+	font-weight: bold;
+	color: white;
+
+	
+}
+/* banner img */
+#head { 
+	height: 150px; 
+	background-image: url(images/mtnpanorama2.jpg);
+	/*background-position: 100% 80%;  width x height */
+	background-size: cover;
+	background-position: 100% 20%;
+	position: relative;
+}
+
+/* body stuff */
+body {
+	padding-bottom:400px;
+}	
+div.general {
+	font-family:"Open Sans", sans-serif;
+	font-size: 16px;
+
+}
+
+div.resume {
+	font-family: "Swis721 Lt BT", sans-serif;
+	font-size: 16px;
+	color: black;
+
+}
+
+div.contentBox{
+	font-family: "Swis721 Lt BT", sans-serif;
+	font-size: 16px;
+	color: black;
+
+}
+
+/* footer stuff */
+div.footer {
+	position: fixed;
+	font-family: "Swis721 Lt BT", sans-serif;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 14px 16px;
+	background-color: #47474C;
+	text-align: center;
+	font-size: 12px;
+
+}
+
