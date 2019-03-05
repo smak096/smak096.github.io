@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>smak // map</title>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+<style>
+#map {
+width: 960px;
+height: 500px;
+margin-left: auto;
+margin-right: auto;
+}
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #464646;
+    color: #ffffff
+}
+</style>
+<a name="top"></a>
+</head>
+
+
+
+
+<body>
+	<div id="head"><div class="header"><h2>smekks // professional dog petter</h2></div></div>
+			
+	<ul id="ul1">
+		<li><a href="Index.html">Home</a></li>
+	    <li><a href="Resume.html">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/saramak/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/smak096" target="_blank">Instagram</a></li>
+		<li><a class="active" href="Map.html">Map</a></li>
+		<li><a href="Contact.html">Contact Me</a></li> 
+	</ul>
+	
+	
+	<div class="general">
+	<p>Here's a map of where I've been, and where home is for me. Click on the markers below to see where I've been!</p>
+	<div id="map"></div>
+
+</body>
+
+<script>
+var map = L.map('map', {scrollWheelZoom:false}).setView([22.294698, 0], 2);
+    
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+//Home places
+var greenIcon = L.icon({
+    iconUrl: 'icons/starHome.png',
+    
+    iconSize:     [15, 15], // size of the icon
+    iconAnchor:   [5, 10], // point of the icon which will correspond to marker's location
+    popupAnchor:  [3, -12] // point from which the popup should open relative to the iconAnchor
+});
+
+
+L.marker([49.2496600, -123.1193400], {icon: greenIcon}).addTo(map).bindPopup("Vancouver, BC");
+L.marker([43.653908, -79.384293], {icon: greenIcon}).addTo(map).bindPopup("Toronto, ON");
+
+// Where I've been places
+var redIcon = L.icon({
+	iconUrl: 'icons/awayIcon.png',
+	
+	iconSize:     [15, 15], // size of the icon
+    iconAnchor:   [5, 10], // point of the icon which will correspond to marker's location
+    popupAnchor:  [3, -12] // point from which the popup should open relative to the iconAnchor
+});
+
+L.marker([22.302711, 114.177216], {icon: redIcon}).addTo(map).bindPopup("Hong Kong, SAR China");
+L.marker([-1.2833300, 36.8166700], {icon: redIcon}).addTo(map).bindPopup("Kenya"); // Nairobi
+L.marker([-6.16394, 39.19793], {icon: redIcon}).addTo(map).bindPopup("Tanzania"); // Tanzania
+L.marker([37.532600, 127.024612], {icon: redIcon}).addTo(map).bindPopup("South Korea"); // South Korea
+L.marker([40.730610, -73.935242], {icon: redIcon}).addTo(map).bindPopup("New York, USA");
+L.marker([51.180202, -115.565704], {icon: redIcon}).addTo(map).bindPopup("Banff, AB");
+L.marker([50.116322, -122.957359], {icon: redIcon}).addTo(map).bindPopup("Whistler, BC");
+L.marker([34.052235, -118.243683], {icon: redIcon}).addTo(map).bindPopup("Los Angeles, USA");
+L.marker([47.451542, 8.564572], {icon: redIcon}).addTo(map).bindPopup("Switzerland"); // Zurich
+L.marker([52.370216, 4.895168], {icon: redIcon}).addTo(map).bindPopup("Amsterdam, The Netherlands");
+L.marker([1.290270,	103.851959], {icon: redIcon}).addTo(map).bindPopup("Singapore, Singapore");
+L.marker([35.652832, 139.839478], {icon: redIcon}).addTo(map).bindPopup("Japan"); // Tokyo
+L.marker([39.9075012, 116.3972321], {icon: redIcon}).addTo(map).bindPopup("Beijing, China");
+L.marker([43.4668007, -80.5163879], {icon: redIcon}).addTo(map).bindPopup("Waterloo, ON");
+L.marker([22.210928, 113.552971], {icon: redIcon}).addTo(map).bindPopup("Macau, SAR China");
+L.marker([45.5088387, -73.5878067], {icon: redIcon}).addTo(map).bindPopup("Montréal, QC");
+L.marker([45.411171, -75.6981201], {icon: redIcon}).addTo(map).bindPopup("Ottawa, ON");
+L.marker([46.8138783, -71.2079809], {icon: redIcon}).addTo(map).bindPopup("Québec City, QC");
+L.marker([46.422478, -81.136312], {icon: redIcon}).addTo(map).bindPopup("Lively, ON"); //WaH
+L.marker([46.492977, -80.994171], {icon: redIcon}).addTo(map).bindPopup("Sudbury, ON"); //The Coulson Nightclub 
+L.marker([43.1001205, -79.0662689], {icon: redIcon}).addTo(map).bindPopup("Niagara Falls, ON");
+L.marker([44.2297592, -76.4809799], {icon: redIcon}).addTo(map).bindPopup("Kingston, ON");
+L.marker([42.8864517, -78.8783722], {icon: redIcon}).addTo(map).bindPopup("Buffalo, USA"); 
+L.marker([45.2500687, -81.6664734], {icon: redIcon}).addTo(map).bindPopup("Tobermory, ON");
+L.marker([43.9001198, -78.8495712], {icon: redIcon}).addTo(map).bindPopup("Oshawa, ON");
+L.marker([48.4329414, -123.3693008], {icon: redIcon}).addTo(map).bindPopup("Victoria, BC");
+L.marker([43.689782, -80.432030], {icon: redIcon}).addTo(map).bindPopup("Elora, ON");
+L.marker([43.195797, -80.384928], {icon: redIcon}).addTo(map).bindPopup("Paris, ON");
+</script>
+
+<p>
+	<b id="para1">Where I'm From</b>
+<div class="contentBox">
+	<ul>
+		<li>Vancouver, BC</li>
+		<li>Toronto, ON</li>
+	</ul>
+</div>
+	</br>
+</p>
+<p>
+	<b id="para1">Where I've Been</b>
+<div class="contentBox" style="margin:0px auto; width:100%"> <!-- Styling for contentBox in CSS --> 
+ <!-- columns divs, float left, no margin so there is no space between column, width=1/3 -->
+    <div id="column1" style="float:left; margin:0; width:33%;">
+    <p>Canada</p>
+		<ul>
+			<li>Victoria, BC</li>
+			<li>Whistler, BC</li>
+			<li>Banff, AB</li>
+			<li>Elora, ON</li>
+			<li>Kingston, ON</li>
+			<li>Lively, ON</li>
+			<li>Niagara Falls, ON</li>
+			<li>Oshawa, ON</li>
+			<li>Ottawa, ON</li>	
+			<li>Paris, ON</li>
+			<li>Sudbury, ON</li>
+			<li>Tobermory, ON</li>	
+			<li>Waterloo, ON</li>
+			<li>Montréal, QC</li>
+			<li>Québec City, QC</li> 
+		</ul>
+	</div>
+
+    <div id="column2" style="float:left; margin:0;width:33%;">
+    <p> United States </p>
+		<ul>
+			<li>Buffalo, USA</li>
+			<li>Los Angeles, USA</li>
+			<li>New York, USA</li>		
+		</ul>
+	<p> Europe </p>
+		<ul>
+			<li>Amsterdam, The Netherlands</li>
+			<li>Switzerland</li>
+		</ul>
+	<p>Africa</p>
+		<ul>
+			<li>Kenya</li>
+			<li>Tanzania</li>
+		</ul>
+	</div>
+	<div id="column3" style="float:left; margin:0;width:33%;">
+	<p>Asia</p>
+		<ul>
+			<li>Beijing, China</li>
+			<li>Hong Kong, SAR China</li>
+			<li>Japan</li>
+			<li>Macau, SAR China</li>
+			<li>Singapore, Singapore</li>
+			<li>South Korea</li>
+		</ul>
+		</ul>
+    </div>
+</br>
+</div>
+	
+	<div class="footer">
+	<a href='#top'><font color= "white">Back to Top</a>
+	</div> 
+</body>
+
+</html>
